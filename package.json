@@ -19,7 +19,7 @@
     "async",
     "await"
   ],
-  "author": "Steve Coffman",
+  "author": "Mohan Kartha, Sports3-D Inc.",
   "license": "ISC",
   "dependencies": {
     "koa": "^2.3.0"
