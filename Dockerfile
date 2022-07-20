@@ -36,7 +36,7 @@ ARG GIT_BRANCH="unknown"
 ARG BUILD_TIME="unknown"
 
 LABEL name="Koa Kubernetes Example" \
-  maintainer="StevenACoffman" \
+  maintainer="MohanKartha" \
   git-repo="$GIT_REPO" \
   git-commit="$GIT_COMMIT" \
   git-branch="$GIT_BRANCH" \

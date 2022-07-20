@@ -22,7 +22,7 @@
 # Image Name -
 #   Informally, the name component after any prefixing hostnames and namespaces.
 
-IMAGE_NAME=koa_kubernetes_example
+IMAGE_NAME=s3d_koa_demo
 REPOSITORY_NAMESPACE=${1:-"sport3-d"}
 # default REGISTRY is "hub.docker.com"
 REGISTRY="hub.docker.com"
