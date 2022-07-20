@@ -23,7 +23,7 @@
 #   Informally, the name component after any prefixing hostnames and namespaces.
 
 IMAGE_NAME=koa_kubernetes_example
-REPOSITORY_NAMESPACE=${1:-"Sport3-D"}
+REPOSITORY_NAMESPACE=${1:-"sport3-d"}
 # default REGISTRY is "hub.docker.com"
 REGISTRY="hub.docker.com"
 REPOSITORY="${REGISTRY}/${REPOSITORY_NAMESPACE}/${IMAGE_NAME}"
