@@ -1,5 +1,5 @@
 # if you're doing anything beyond your local machine, please pin this to a specific version at https://hub.docker.com/_/node/
-FROM node:8.6-alpine
+FROM node:18-alpine
 
 # tini and su-exec because both PID 1 and root are special
 # --no-cache option preferred over --update
