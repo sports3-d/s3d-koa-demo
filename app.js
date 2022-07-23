@@ -853,6 +853,7 @@ router.get( '/getAllPlotPoints/:archiveId/:tablelength/:tablewidth/:theight/:net
                             frameId: archive.frameId,
                             ptCount: ptCount,
                             trajCount: archive.plays.length,
+                            archiveData: archive,
                             video: false
                         }
                         if(videoData.data.hasOwnProperty( dataLabel.archiveFileName) &&
@@ -916,10 +917,11 @@ router.get( '/getAllPlotPoints/:archiveId/:tablelength/:tablewidth/:theight/:net
                                     //let scaledPt = (xCenterOffset - eventPt.x) * xScaleFactor;
                                     // netOffset hack when explain why 136 can't be at the net
                                     if (newPlotPt.name == "TRK_HIT_NET") {
-                                        newPlotPt.x = 0;
+  //                                      newPlotPt.x = 0;
                                     }
                                     if (inRange(newPlotPt.x, plotPoints[ptIndex].x, plotPoints[ptIndex - 1].x)) {
                                         newPlotPt.index = ptIndex;
+                                        newPlot.y = ( plotPoints[ ptIndex].y + plotPoinss[ ptIndex - 1]) / 2.0
                                         newPlotPt.trajIndex - plotPoints[ptIndex].trajIndex;
                                         plotPoints.splice(ptIndex, 0, newPlotPt);
                                         ptInserted = true;
