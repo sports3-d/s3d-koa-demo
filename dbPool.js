@@ -3,7 +3,22 @@
 const { Pool } = require('pg');
 
 function dbPool() {
-    let pool = vmPool();
+
+    const dbSource = (process.env.DBSOURCE ? process.env.DBSOURCE : "localhost")
+    let pool = false;
+    switch( dbSource.toString().toLowerCase()) {
+        case "server":
+            pool = serverPool();
+            break;
+            
+        case "localvm":
+            pool = vmPool();
+            break;
+
+        default:
+            pool = localPool();
+    }
+
     return pool
 }
 
@@ -21,8 +36,6 @@ function serverPool() {
     })
     return pool
 }
-
-
 function tunnelPool() {
     let pool = new Pool({
         username: 'tjl',
